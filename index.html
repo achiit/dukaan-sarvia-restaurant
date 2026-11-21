@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sawariya Restaurant | नवाबगंज, गोंडा</title>
+<meta name="description" content="सावरिया रेस्टोरेंट, नवाबगंज, गोंडा। नाश्ता, चाइनीज़, पिज़्ज़ा, रोटी-चावल और फ़ैमिली थाली। WhatsApp पर ऑर्डर करें।">
+<style>
+*{box-sizing:border-box}
+:root{--sky:#A8D7F7;--sky2:#5FB4EA;--yel:#F4F500;--ink:#0B2A52;--muted:#5b6b82;--line:#D6E6F5}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:linear-gradient(180deg,#A8D7F7 0%,#EAF6FD 45%,#FFFEF2 100%);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Devanagari","Mangal",sans-serif;line-height:1.5;font-size:15px;min-height:100vh;position:relative;overflow-x:hidden}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:inherit}
+.hidden{display:none!important}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px;position:relative;z-index:2}
+.kicker{color:#0B5CA8;letter-spacing:3px;font-size:12px;text-align:center;margin:0;font-weight:700}
+h2.title{text-align:center;font-size:clamp(26px,4vw,36px);margin:6px 0 0;font-weight:800}
+.lead{text-align:center;color:var(--muted);margin:10px auto 0;max-width:640px;font-size:14px}
+.muted{color:var(--muted);font-size:13px;margin:4px 0 0}
+.blue{color:#0B5CA8}
+
+#bgFood{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+#bgFood span{position:absolute;bottom:-80px;opacity:.5;animation:floatUp linear infinite}
+@keyframes floatUp{0%{transform:translateY(0) rotate(0)}100%{transform:translateY(-115vh) rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){#bgFood span{animation:none}}
+
+header{position:sticky;top:0;z-index:40;background:rgba(11,42,82,.96);border-bottom:2px solid var(--yel)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px;height:62px}
+.brand{font-weight:800;font-size:20px;color:var(--yel);text-decoration:none}
+nav.top{display:flex;gap:16px;font-size:14px}
+nav.top a{text-decoration:none;color:#fff;opacity:.9}
+nav.top a:hover{color:var(--yel)}
+.hbtns{display:flex;gap:8px;align-items:center}
+.pill{background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;border-radius:999px;padding:7px 12px;cursor:pointer;font-size:13px;white-space:nowrap}
+.pill:hover{border-color:var(--yel);color:var(--yel)}
+.plusbtn{width:38px;height:38px;border-radius:50%;border:2px solid var(--yel);background:transparent;color:var(--yel);font-size:24px;line-height:1;cursor:pointer;font-weight:700}
+.plusbtn:hover{background:var(--yel);color:var(--ink)}
+.cartbtn{border:0;background:var(--yel);color:var(--ink);border-radius:999px;padding:8px 15px;cursor:pointer;font-size:14px;font-weight:700;position:relative}
+.badge{position:absolute;top:-7px;right:-7px;background:#fff;color:var(--ink);border:2px solid var(--yel);border-radius:999px;font-size:11px;font-weight:800;min-width:22px;height:22px;display:grid;place-items:center;padding:0 4px}
+
+.btn{background:var(--yel);color:var(--ink);border:0;border-radius:999px;padding:13px 24px;font-weight:800;cursor:pointer;font-size:15px;text-decoration:none;display:inline-block;box-shadow:0 6px 16px rgba(11,42,82,.15)}
+.btn:hover{filter:brightness(1.05)}
+.btn.blue-b{background:#0B5CA8;color:#fff}
+.btn.wa{background:#25D366;color:#06341a}
+.btn.ghost{background:#fff;color:var(--ink);border:2px solid var(--ink);box-shadow:none}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.btn.block{display:block;width:100%;text-align:center}
+.btn.small{padding:8px 14px;font-size:13px;box-shadow:none}
+.btn.danger{background:#fff;color:#b91c1c;border:2px solid #f87171;box-shadow:none}
+
+.hero{padding:64px 0 56px;text-align:center;position:relative;z-index:2}
+.hero h1{font-size:clamp(38px,8vw,70px);margin:0;font-weight:900;text-shadow:0 3px 0 var(--yel)}
+.hero h2{margin:8px 0 0;font-size:clamp(18px,3vw,26px);font-weight:700;color:#0B5CA8}
+.hero p{margin:10px 0 0;font-weight:600}
+.veg{display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--yel);border-radius:999px;padding:5px 14px;font-size:12px;font-weight:700;margin-bottom:14px}
+.veg-dot{width:12px;height:12px;border:2px solid #16a34a;display:inline-block;position:relative;background:#fff}
+.veg-dot::after{content:"";position:absolute;inset:2px;border-radius:50%;background:#16a34a}
+.hero .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+
+section{padding:50px 0;position:relative;z-index:2}
+.sec-first{padding-top:28px}
+
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:18px 0 10px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;background:#fff;border:2px solid var(--sky2);border-radius:999px;padding:9px 16px;cursor:pointer;font-size:14px;font-weight:700;white-space:nowrap}
+.tab.on{background:var(--yel);border-color:var(--yel)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));margin-top:16px}
+.card{background:#fff;border:2px solid var(--line);border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:8px;cursor:pointer;transition:.2s;box-shadow:0 6px 18px rgba(11,42,82,.08)}
+.card:hover{border-color:var(--sky2);transform:translateY(-3px)}
+.card .img{height:130px;border-radius:14px;background:linear-gradient(160deg,#EAF6FD,#A8D7F7);display:grid;place-items:center;overflow:hidden;position:relative}
+.card .img img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.card .img .em{font-size:52px;line-height:1}
+.card h3{margin:4px 0 0;font-size:16px;font-weight:800}
+.card .desc{color:var(--muted);font-size:13px;margin:0}
+.card .foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:8px;padding-top:8px}
+.price{color:#0B5CA8;font-weight:800;font-size:15px}
+.price small{display:block;color:var(--muted);font-weight:600;font-size:12px}
+.add{background:var(--yel);color:var(--ink);border:0;border-radius:999px;padding:8px 14px;font-weight:800;font-size:13px;cursor:pointer;white-space:nowrap}
+
+.stampbox{background:#fff;border:2px solid var(--sky2);border-radius:24px;padding:22px;max-width:640px;margin:20px auto 0;box-shadow:0 10px 28px rgba(11,42,82,.1)}
+.stamps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}
+.slot{aspect-ratio:1;border:2px dashed var(--sky2);border-radius:14px;display:grid;place-items:center;text-align:center;font-size:12px;color:var(--muted);padding:4px;background:#F5FBFF}
+.slot.on{border:2px solid var(--yel);background:#FFFDE0;color:var(--ink);font-weight:700}
+.slot .st{font-size:26px;display:block}
+.msg{min-height:22px;text-align:center;font-size:14px;margin:8px 0;font-weight:700}
+.warn{color:#b45309}
+.okc{color:#15803d}
+.reward{border:2px solid var(--yel);border-radius:16px;padding:16px;text-align:center;margin-top:14px;background:#FFFDE0}
+.code{font-family:ui-monospace,Menlo,Consolas,monospace;letter-spacing:2px;border:2px dashed var(--sky2);border-radius:10px;padding:8px;margin:10px 0;background:#fff;font-weight:700}
+
+.review,.visit{background:#fff;border-radius:24px;padding:22px;max-width:620px;margin:20px auto 0;border:2px solid var(--sky2);box-shadow:0 10px 28px rgba(11,42,82,.1)}
+.visit{text-align:center}
+.visit p{margin:6px 0}
+textarea,input,select{width:100%;background:#fff;border:2px solid var(--line);border-radius:14px;padding:11px 13px;outline:none;color:var(--ink)}
+textarea:focus,input:focus,select:focus{border-color:var(--sky2)}
+.two{display:flex;gap:8px;margin-top:10px}
+.two>*{flex:1}
+.ghostbtn{background:#fff;border:2px solid var(--sky2);color:var(--ink);border-radius:999px;padding:10px;cursor:pointer;font-size:14px;font-weight:700}
+.ghostbtn.on{background:var(--yel);border-color:var(--yel)}
+
+.insta{background:linear-gradient(135deg,#fdf2f8,#fff7ed,#eff6ff);border:2px solid #f9a8d4;border-radius:24px;padding:22px;max-width:620px;margin:0 auto;text-align:center}
+.insta a{font-weight:800;color:#be185d;font-size:17px;text-decoration:none}
+
+footer{padding:24px 16px;text-align:center;font-size:12px;position:relative;z-index:2;background:rgba(255,255,255,.7)}
+footer button{background:none;border:0;color:var(--ink);text-decoration:underline;cursor:pointer;font-size:12px}
+
+.sheet{position:fixed;inset:0;background:rgba(11,42,82,.55);z-index:80;display:none;align-items:flex-end;justify-content:center}
+.sheet.show{display:flex}
+.panel{background:#fff;width:100%;max-width:640px;max-height:92vh;overflow-y:auto;border-radius:24px 24px 0 0;position:relative}
+@media (min-width:640px){.sheet{align-items:center}.panel{border-radius:24px}}
+.sh{display:flex;gap:14px;align-items:center;padding:16px 18px;border-bottom:2px solid var(--line);position:sticky;top:0;background:#fff;z-index:2}
+.sh .big{width:56px;height:56px;border-radius:14px;background:#EAF6FD;display:grid;place-items:center;font-size:30px;overflow:hidden;position:relative;flex:none}
+.sh .big img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.sh h3{margin:0;font-size:18px}
+.x{margin-left:auto;background:#EAF6FD;border:0;width:36px;height:36px;border-radius:50%;font-size:22px;cursor:pointer;line-height:1}
+.body{padding:16px 18px}
+.lbl{font-size:13px;color:#0B5CA8;margin:16px 0 8px;font-weight:800}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:#fff;border:2px solid var(--sky2);border-radius:999px;padding:8px 13px;cursor:pointer;font-size:13px;font-weight:700}
+.chip.on{background:var(--yel);border-color:var(--yel)}
+.chip.off{background:#fde8e8;border-color:#f87171;text-decoration:line-through;color:#991b1b}
+.qty{display:flex;align-items:center;gap:12px}
+.qty button{width:36px;height:36px;border-radius:50%;border:2px solid var(--sky2);background:#fff;font-size:18px;cursor:pointer;font-weight:800}
+.qty span{min-width:24px;text-align:center;font-weight:800}
+.foot2{padding:14px 18px 18px;border-top:2px solid var(--line);position:sticky;bottom:0;background:#fff}
+.line{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.line .em{font-size:28px;width:44px;text-align:center}
+.line .info{flex:1;min-width:0}
+.line .info b{font-size:14px}
+.line .info small{display:block;color:var(--muted);font-size:12px}
+.line .qty button{width:30px;height:30px;font-size:16px}
+.total{display:flex;justify-content:space-between;font-size:17px;font-weight:800;margin:14px 0}
+.field{margin-top:10px}
+.field label{font-size:13px;color:#0B5CA8;display:block;margin-bottom:5px;font-weight:700}
+.err{color:#b91c1c;font-size:13px;min-height:18px;margin-top:8px;font-weight:600}
+.empty{text-align:center;color:var(--muted);padding:40px 10px}
+.note{font-size:12px;color:var(--muted);margin:6px 0 0}
+.toggle{display:flex;align-items:center;gap:10px;padding:10px 12px;border:2px solid var(--line);border-radius:12px;margin-top:10px;cursor:pointer;font-weight:600}
+.toggle input{width:auto}
+.adm-row{border:2px solid var(--line);border-radius:14px;padding:12px;margin-top:10px}
+.r1{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.ord{border:2px solid var(--line);border-radius:14px;padding:12px;margin-top:10px;font-size:14px}
+.ord .top{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.ord .meta{color:var(--muted);font-size:12px;margin-top:4px}
+.ord ul{margin:8px 0 0;padding-left:18px}
+.tag{display:inline-block;background:#EAF6FD;border-radius:999px;padding:2px 9px;font-size:12px;font-weight:700;color:#0B5CA8;margin-right:4px}
+
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-size:14px;z-index:120;opacity:0;pointer-events:none;transition:.3s;max-width:92vw;text-align:center}
+#toast.show{opacity:1}
+
+#gate{position:fixed;inset:0;z-index:100;background:linear-gradient(180deg,#A8D7F7,#FFFEF2);display:none;align-items:center;justify-content:center;padding:18px}
+#gate.show{display:flex}
+.gcard{background:#fff;border:2px solid var(--yel);border-radius:24px;padding:26px;width:100%;max-width:400px;text-align:center;box-shadow:0 16px 40px rgba(11,42,82,.2)}
+.gcard h1{margin:10px 0 0;font-size:32px;text-shadow:0 2px 0 var(--yel)}
+.gcard .sub{color:#0B5CA8;margin:4px 0 16px;font-weight:700}
+.gcard form{text-align:left}
+</style>
+</head>
+<body>
+
+<div id="bgFood" aria-hidden="true"></div>
+
+<div id="gate" role="dialog" aria-modal="true" aria-labelledby="gTitle">
+  <div class="gcard">
+    <span class="veg"><span class="veg-dot"></span> शुद्ध शाकाहारी</span>
+    <h1 id="gTitle">Sawariya</h1>
+    <div class="sub">सावरिया रेस्टोरेंट · नवाबगंज, गोंडा</div>
+    <form id="gateForm" novalidate>
+      <div class="field"><label for="gName">आपका नाम</label><input id="gName" maxlength="40" autocomplete="name" placeholder="जैसे: आरव शर्मा"></div>
+      <div class="field"><label for="gMobile">मोबाइल नंबर</label><input id="gMobile" type="tel" inputmode="numeric" maxlength="14" autocomplete="tel-national" placeholder="10 अंकों का नंबर"></div>
+      <div class="err" id="gErr"></div>
+      <button class="btn block" type="submit">आगे बढ़ें</button>
+      <p class="muted" style="text-align:center;font-size:12px;margin-top:10px">यह जानकारी सिर्फ़ इसी डिवाइस पर सेव होती है।</p>
+    </form>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <a href="#home" class="brand">Sawariya</a>
+    <nav class="top">
+      <a href="#menu">मेन्यू</a>
+      <a href="#stamps">स्टैम्प कार्ड</a>
+      <a href="#reviews">रिव्यू</a>
+      <a href="#visit">पता</a>
+    </nav>
+    <div class="hbtns">
+      <button class="pill" id="userBtn" title="नाम/नंबर बदलें">👤 <span id="userName">Guest</span></button>
+      <button class="plusbtn" id="ownerBtn" title="मालिक पैनल" aria-label="मालिक पैनल">+</button>
+      <button class="cartbtn" id="cartBtn" aria-label="आपका ऑर्डर">🛒 <span id="cartCount" class="badge">0</span></button>
+    </div>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <div class="wrap">
+    <span class="veg"><span class="veg-dot"></span> 100% शुद्ध शाकाहारी</span>
+    <h1>Sawariya</h1>
+    <h2>सावरिया रेस्टोरेंट</h2>
+    <p>नाश्ता · चाइनीज़ · पिज़्ज़ा · रोटी-चावल · फ़ैमिली थाली</p>
+    <p>📍 <span data-address>नवाबगंज, गोंडा, उत्तर प्रदेश</span></p>
+    <div class="row">
+      <a href="#menu" class="btn">मेन्यू देखें और ऑर्डर करें</a>
+      <a href="#stamps" class="btn ghost">🎟 7-दिन स्टैम्प कार्ड</a>
+    </div>
+  </div>
+</section>
+
+<section id="menu" class="sec-first">
+  <div class="wrap">
+    <p class="kicker">अपनी पसंद से चुनें</p>
+    <h2 class="title">हमारा <span class="blue">मेन्यू</span></h2>
+    <p class="lead">किसी भी आइटम पर टैप करें। जहाँ हाफ़/फ़ुल प्लेट है वहाँ साइज़ चुनें। सामग्री हटाएँ, एक्स्ट्रा जोड़ें या नोट लिखें।</p>
+    <div class="tabs" id="tabs"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="stamps">
+  <div class="wrap">
+    <p class="kicker">LOYALTY REWARD</p>
+    <h2 class="title">7-दिन <span class="blue">स्टैम्प चैलेंज</span></h2>
+    <p class="lead">रोज़ एक स्टैम्प लें। 7 स्टैम्प पूरे होने पर पाएँ <b>फ्री चाय या कॉफ़ी</b>।</p>
+    <div class="stampbox">
+      <div style="display:flex;justify-content:space-between;font-size:14px;font-weight:700">
+        <span>कार्ड: <b id="stUser" class="blue"></b></span>
+        <b id="stProg" class="blue">0 / 7</b>
+      </div>
+      <div class="stamps" id="stGrid"></div>
+      <div class="msg" id="stMsg"></div>
+      <button class="btn block" id="claimBtn">आज का स्टैम्प लें</button>
+      <div id="rewardBox"></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <p class="kicker">अच्छा लगा?</p>
+    <h2 class="title">Google पर <span class="blue">रिव्यू</span> दें</h2>
+    <p class="lead">हमने आपके लिए एक रिव्यू लिख दिया है। बटन दबाएँ, Google पर पेस्ट करें और Post करें।</p>
+    <div class="review">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
+        <span style="font-size:13px" class="blue"><b>✍️ आपका रिव्यू (बदल सकते हैं)</b></span>
+        <div class="two" style="margin:0">
+          <button class="ghostbtn on" id="rvHi">हिंदी</button>
+          <button class="ghostbtn" id="rvEn">English</button>
+        </div>
+      </div>
+      <textarea id="rvText" rows="4" maxlength="400" style="margin-top:12px"></textarea>
+      <div class="two">
+        <button class="ghostbtn" id="rvNext">🔄 दूसरा रिव्यू</button>
+        <button class="ghostbtn" id="rvCopy">📋 कॉपी</button>
+      </div>
+      <button class="btn block" id="reviewGo" style="margin-top:12px">⭐ कॉपी करें और Google पर Post करें</button>
+      <p class="muted" style="text-align:center;font-size:12px;margin-top:10px">Google नए टैब में खुलेगा। बॉक्स में दबाकर रखें, <b>Paste</b> चुनें, फिर <b>Post</b> करें।</p>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <p class="kicker">हमसे मिलें</p>
+    <h2 class="title"><span class="blue">नवाबगंज, गोंडा</span> में आएँ</h2>
+    <div class="visit">
+      <p>📍 <span data-address>नवाबगंज, गोंडा, उत्तर प्रदेश</span></p>
+      <p>📞 <a href="tel:+919625040844" data-tel style="font-weight:800;color:#0B5CA8">+91 96250 40844</a></p>
+      <p style="margin-top:14px"><a class="btn ghost" id="mapLink" target="_blank" rel="noopener" href="#">Google Maps पर खोलें ↗</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="instaBox" class="hidden">
+  <div class="wrap">
+    <div class="insta">
+      <p class="kicker" style="color:#be185d">INSTAGRAM</p>
+      <h3 style="margin:6px 0 10px;font-size:22px">हमें Instagram पर फ़ॉलो करें</h3>
+      <a id="instaLink" target="_blank" rel="noopener" href="#">@sawariya</a>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="yr"></span> Sawariya Restaurant (सावरिया रेस्टोरेंट), नवाबगंज, गोंडा · शुद्ध शाकाहारी<br><button id="ownerLinkBtn">मालिक लॉगिन</button></footer>
+
+<div class="sheet" id="sheet"><div class="panel" id="panel"></div></div>
+<div id="toast"></div>
+
+<script>
+(function () {
+'use strict';
+
+var OWNER = { name: 'hanu soni', pass: '6393260' };
+var DEF = {
+  phone: '9625040844',
+  address: 'नवाबगंज, गोंडा, उत्तर प्रदेश',
+  reviewUrl: 'https://www.google.com/search?q=Sawariya+Restaurant+Nawabganj+Gonda+review',
+  insta: 'sawariya_nawabganj',
+  mapUrl: 'https://www.google.com/maps/search/?api=1&query=Sawariya+Restaurant+Nawabganj+Gonda+Uttar+Pradesh'
+};
+
+function $(s) { return document.querySelector(s); }
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+function rs(n) { return '₹' + Number(n || 0).toLocaleString('en-IN'); }
+function load(k, f) { try { var v = JSON.parse(localStorage.getItem(k)); return v == null ? f : v; } catch (e) { return f; } }
+function save(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+function todayStr() { return new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Kolkata' }); }
+function nowStr() { return new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }); }
+function fmtDay(d) { var p = d.split('-'); return Number(p[2]) + '/' + Number(p[1]); }
+function normMobile(v) { var d = String(v || '').replace(/\D/g, ''); if (d.length === 12 && d.indexOf('91') === 0) d = d.slice(2); return /^[6-9]\d{9}$/.test(d) ? d : ''; }
+function uid() { return 'x' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6); }
+var toastT;
+function toast(m) { var t = $('#toast'); t.textContent = m; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(function () { t.classList.remove('show'); }, 2600); }
+
+/* ---------- settings (owner can change) ---------- */
+var SET = Object.assign({}, DEF, load('sw_settings_v3', {}));
+function waNum() { var d = String(SET.phone || '').replace(/\D/g, '').slice(-10); return d.length === 10 ? '91' + d : '919625040844'; }
+function prettyPhone() { var d = waNum().slice(-10); return '+91 ' + d.slice(0, 5) + ' ' + d.slice(5); }
+function applySettings() {
+  document.querySelectorAll('[data-address]').forEach(function (el) { el.textContent = SET.address; });
+  document.querySelectorAll('[data-tel]').forEach(function (el) { el.href = 'tel:+' + waNum(); el.textContent = prettyPhone(); });
+  $('#mapLink').href = SET.mapUrl;
+  var ig = String(SET.insta || '').replace(/^@/, '').trim();
+  if (ig) {
+    $('#instaLink').href = 'https://instagram.com/' + ig;
+    $('#instaLink').textContent = '@' + ig;
+    $('#instaBox').classList.remove('hidden');
+  } else {
+    $('#instaBox').classList.add('hidden');
+  }
+}
+
+/* ---------- options ---------- */
+var CATS = [
+  { id: 'nashta', label: 'नाश्ता', icon: '🥟' },
+  { id: 'chinese', label: 'चाइनीज़', icon: '🍜' },
+  { id: 'pizza', label: 'पिज़्ज़ा', icon: '🍕' },
+  { id: 'roti', label: 'रोटी व चावल', icon: '🫓' },
+  { id: 'thali', label: 'फ़ैमिली थाली', icon: '🍱' }
+];
+var OPTS = {
+  spice: { label: 'मसाला / तीखापन', list: ['नॉन स्पाइसी', 'कम तीखा', 'नॉर्मल', 'डबल स्पाइसी'], def: 'नॉर्मल' },
+  sugar: { label: 'चीनी / मिठास', list: ['बिना चीनी', 'कम चीनी', 'नॉर्मल', 'डबल चीनी'], def: 'नॉर्मल' },
+  style: { label: 'बनावट', list: ['ड्राई', 'ग्रेवी'], def: 'ड्राई' }
+};
+
+/* ---------- menu ---------- */
+function H(a, b) { return [['हाफ', a], ['फुल', b]]; }
+var ROWS = [
+  ['nashta', 'चाय', '☕', 15, null, ['sugar']],
+  ['nashta', 'कॉफ़ी', '☕', 30, null, ['sugar']],
+  ['nashta', 'ब्रेड पकौड़ा', '🍞', 25],
+  ['nashta', 'पनीर पकौड़े', '🧆', 140],
+  ['nashta', 'प्याज पकौड़ा', '🧅', 100],
+  ['nashta', 'मिक्स पकौड़ा', '🥘', 80],
+  ['nashta', 'पूड़ी छोला', '🫓', 60],
+  ['nashta', 'छोले भटूरे (2 पीस)', '🫓', 60],
+  ['nashta', 'आलू पराठा (2 पीस)', '🫓', 80],
+  ['nashta', 'पनीर पराठा (2 पीस)', '🫓', 120],
+  ['nashta', 'प्याज पराठा (2 पीस)', '🫓', 70],
+  ['nashta', 'मिक्स पराठा (2 पीस)', '🫓', 90],
+  ['nashta', 'वेज सैंडविच', '🥪', 40],
+  ['nashta', 'पनीर सैंडविच', '🥪', 60],
+  ['nashta', 'चीज़ पनीर सैंडविच', '🥪', 80],
+  ['nashta', 'चीज़ सैंडविच', '🥪', 50],
+  ['nashta', 'बन्द मक्खन', '🧈', 30],
+  ['nashta', 'पनीर उत्तपम', '🥞', 150],
+  ['nashta', 'आलू उत्तपम', '🥞', 100],
+  ['nashta', 'पाव भाजी', '🍛', 50],
+  ['nashta', 'वड़ा पाव', '🍔', 30],
+
+  ['chinese', 'पनीर चिल्ली (ड्राई/ग्रेवी)', '🌶️', 0, H(120, 240), ['style', 'spice']],
+  ['chinese', 'वेज मन्च्यूरियन (ड्राई/ग्रेवी)', '🥢', 0, H(90, 180), ['style', 'spice']],
+  ['chinese', 'पनीर मन्च्यूरियन (ड्राई/ग्रेवी)', '🥢', 0, H(120, 240), ['style', 'spice']],
+  ['chinese', 'मन्च्यूरियन फ़ाई राइस', '🍚', 0, H(150, 280)],
+  ['chinese', 'हक्का नूडल', '🍜', 0, H(70, 140)],
+  ['chinese', 'सेजवान नूडल', '🌶️', 0, H(70, 140)],
+  ['chinese', 'चिल्ली पटेटो', '🍟', 0, H(70, 140), ['spice']],
+  ['chinese', 'हनी चिल्ली पटेटो', '🍯', 0, H(80, 160), ['spice']],
+  ['chinese', 'फ़्रेंच फ़ाई', '🍟', 0, H(60, 120)],
+  ['chinese', 'वेज फ़ाई राइस', '🍚', 0, H(80, 160)],
+  ['chinese', 'पनीर फ़ाई राइस', '🍚', 0, H(90, 180)],
+  ['chinese', 'पनीर रोल', '🌯', 100],
+  ['chinese', 'वेज रोल', '🌯', 60],
+  ['chinese', 'वेज मैगी', '🍝', 60, null, ['spice']],
+  ['chinese', 'पनीर मैगी', '🍝', 80, null, ['spice']],
+  ['chinese', 'प्लेन मैगी', '🍝', 50, null, ['spice']],
+  ['chinese', 'वेज चाउमीन', '🍜', 0, H(60, 120), ['spice']],
+  ['chinese', 'पनीर चाउमीन', '🍜', 0, H(70, 140), ['spice']],
+  ['chinese', 'पनीर मोमो', '🥟', 0, H(60, 120), ['spice']],
+  ['chinese', 'वेज मोमो', '🥟', 0, H(40, 80), ['spice']],
+  ['chinese', 'वेज बर्गर', '🍔', 40],
+  ['chinese', 'पनीर बर्गर', '🍔', 60],
+
+  ['pizza', 'मार्गेरिटा पिज़्ज़ा', '🍕', 100],
+  ['pizza', 'अनियन पिज़्ज़ा', '🍕', 120],
+  ['pizza', 'कैप्सिकम पिज़्ज़ा', '🍕', 140],
+  ['pizza', 'पनीर पिज़्ज़ा', '🍕', 180],
+  ['pizza', 'डबल चीज़ पिज़्ज़ा', '🍕', 290],
+  ['pizza', 'चिल्ली पनीर पिज़्ज़ा', '🍕', 350],
+
+  ['roti', 'प्लेन चावल', '🍚', 0, H(70, 140)],
+  ['roti', 'जीरा राइस', '🍚', 0, H(80, 160)],
+  ['roti', 'तवा रोटी', '🫓', 10],
+  ['roti', 'बटर रोटी', '🫓', 12],
+  ['roti', 'प्लेन पराठा', '🫓', 20],
+
+  ['thali', 'फ़ैमिली थाली', '🍱', 180, null, [], 'सब्ज़ी, दाल, चावल, 4 रोटी']
+];
+var BASE = ROWS.map(function (r, i) {
+  return { id: 'm' + i, cat: r[0], name: r[1], emoji: r[2], price: r[3], sizes: r[4] || null,
+    opts: r[5] || [], desc: r[6] || '', removable: [], extras: [], photo: '', hidden: false };
+});
+
+var OVR = load('sw_menu_v3', { items: {}, added: [] });
+var ALL = [], ITEMS = [], BY = {};
+function isBase(id) { return /^m\d+$/.test(id); }
+function rebuild() {
+  ALL = BASE.map(function (it) { return Object.assign({}, it, OVR.items[it.id] || {}); }).concat(OVR.added.slice());
+  ITEMS = ALL.filter(function (i) { return !i.hidden; });
+  BY = {};
+  ALL.forEach(function (i) { BY[i.id] = i; });
+}
+rebuild();
+
+function catName(id) { for (var i = 0; i < CATS.length; i++) if (CATS[i].id === id) return CATS[i].label; return ''; }
+function priceOf(it, size) { return it.sizes ? it.sizes[size][1] : it.price; }
+function priceText(it) { return it.sizes ? it.sizes.map(function (s) { return s[0] + ' ' + rs(s[1]); }).join(' · ') : rs(it.price); }
+
+/* ---------- state ---------- */
+var activeCat = 'nashta';
+var cart = load('sw_cart_v3', []);
+var user = load('sw_user', null);
+var IS = null;
+var SVC = 'dine';
+var OWN = { tab: 'menu', q: '' };
+
+/* ---------- menu render ---------- */
+function renderTabs() {
+  $('#tabs').innerHTML = CATS.map(function (c) {
+    return '<button class="tab' + (c.id === activeCat ? ' on' : '') + '" data-a="cat" data-c="' + c.id + '">' + c.icon + ' ' + c.label + '</button>';
+  }).join('');
+}
+function imgBlock(it) {
+  return '<div class="img">' + (it.photo ? '<img src="' + it.photo + '" alt="' + esc(it.name) + '">' : '<span class="em">' + it.emoji + '</span>') + '</div>';
+}
+function renderMenu() {
+  renderTabs();
+  $('#grid').innerHTML = ITEMS.filter(function (i) { return i.cat === activeCat; }).map(function (it) {
+    return '<div class="card" data-a="item" data-id="' + it.id + '" role="button" tabindex="0">' +
+      imgBlock(it) +
+      '<h3>' + esc(it.name) + '</h3>' +
+      (it.desc ? '<p class="desc">' + esc(it.desc) + '</p>' : '') +
+      '<div class="foot"><div class="price">' + (it.sizes ? it.sizes.map(function (s) { return s[0] + ' ' + rs(s[1]); }).join('<small></small>') : rs(it.price)) + '</div>' +
+      '<button class="add" data-a="item" data-id="' + it.id + '">चुनें</button></div></div>';
+  }).join('') || '<p class="empty">इस श्रेणी में अभी कोई आइटम नहीं।</p>';
+}
+
+/* ---------- sheet ---------- */
+function openSheet(html) { $('#panel').innerHTML = html; $('#sheet').classList.add('show'); document.body.style.overflow = 'hidden'; }
+function closeSheet() { $('#sheet').classList.remove('show'); document.body.style.overflow = ''; IS = null; }
+
+/* ---------- cart ---------- */
+function extrasTotal(l) { return (l.added || []).reduce(function (s, a) { return s + (Number(a.price) || 0); }, 0); }
+function lineTotal(l) { return (priceOf(BY[l.id], l.size) + extrasTotal(l)) * l.qty; }
+function cartTotal() { return cart.reduce(function (s, l) { return s + lineTotal(l); }, 0); }
+function cartCount() { return cart.reduce(function (s, l) { return s + l.qty; }, 0); }
+function renderCartCount() { $('#cartCount').textContent = cartCount(); }
+function saveCart() { save('sw_cart_v3', cart); renderCartCount(); }
+function lineDetails(l) {
+  var it = BY[l.id], d = [];
+  if (!it) return d;
+  if (it.sizes) d.push(it.sizes[l.size][0]);
+  Object.keys(l.o || {}).forEach(function (k) { d.push(OPTS[k].label + ': ' + l.o[k]); });
+  if (l.removed && l.removed.length) d.push('हटाया: ' + l.removed.join(', '));
+  if (l.added && l.added.length) d.push('जोड़ा: ' + l.added.map(function (a) { return a.name + (a.price ? ' (+' + rs(a.price) + ')' : ''); }).join(', '));
+  if (l.note) d.push('नोट: ' + l.note);
+  return d;
+}
+function lineKey(l) {
+  var ks = Object.keys(l.o || {}).sort().map(function (k) { return k + '=' + l.o[k]; }).join('&');
+  return [l.id, l.size, ks, (l.removed || []).slice().sort().join(','), (l.added || []).map(function (a) { return a.name; }).sort().join(','), l.note || ''].join('|');
+}
+
+function openItem(id) {
+  var it = BY[id]; if (!it) return;
+  IS = { id: id, size: it.sizes ? 0 : -1, o: {}, qty: 1, removed: [], added: [] };
+  (it.opts || []).forEach(function (k) { IS.o[k] = OPTS[k].def; });
+  renderItem();
+}
+function renderItem() {
+  var it = BY[IS.id];
+  var h = '<div class="sh"><div class="big">' + (it.photo ? '<img src="' + it.photo + '" alt="">' : it.emoji) + '</div><div><h3>' + esc(it.name) + '</h3><p class="muted">' + esc(it.desc || catName(it.cat)) + '</p></div><button class="x" data-a="close" aria-label="बंद करें">×</button></div><div class="body">';
+  if (it.sizes) {
+    h += '<div class="lbl">प्लेट का साइज़</div><div class="chips">' + it.sizes.map(function (s, i) {
+      return '<button class="chip' + (IS.size === i ? ' on' : '') + '" data-a="size" data-i="' + i + '">' + s[0] + ' · ' + rs(s[1]) + '</button>';
+    }).join('') + '</div>';
+  }
+  (it.opts || []).forEach(function (k) {
+    h += '<div class="lbl">' + OPTS[k].label + '</div><div class="chips">' + OPTS[k].list.map(function (v) {
+      return '<button class="chip' + (IS.o[k] === v ? ' on' : '') + '" data-a="opt" data-k="' + k + '" data-v="' + esc(v) + '">' + esc(v) + '</button>';
+    }).join('') + '</div>';
+  });
+  h += '<div class="lbl">संख्या</div><div class="qty"><button data-a="qty" data-d="-1">−</button><span>' + IS.qty + '</span><button data-a="qty" data-d="1">+</button></div>';
+  h += '<div class="lbl">➕ सामग्री बदलें (वैकल्पिक)</div>';
+  var rm = it.removable || [];
+  if (rm.length) {
+    h += '<p class="note">सामग्री पर टैप करें, वह हट जाएगी</p><div class="chips">' + rm.map(function (r) {
+      var off = IS.removed.indexOf(r) !== -1;
+      return '<button class="chip' + (off ? ' off' : '') + '" data-a="rm" data-v="' + esc(r) + '">' + (off ? '✕ ' : '') + esc(r) + '</button>';
+    }).join('') + '</div>';
+  }
+  var ex = it.extras || [];
+  if (ex.length) {
+    h += '<p class="note" style="margin-top:10px">एक्स्ट्रा जोड़ें</p><div class="chips">' + ex.map(function (x, i) {
+      var on = IS.added.some(function (a) { return a.name === x.name; });
+      return '<button class="chip' + (on ? ' on' : '') + '" data-a="ad" data-i="' + i + '">' + (on ? '✓ ' : '+ ') + esc(x.name) + (x.price ? ' · ' + rs(x.price) : '') + '</button>';
+    }).join('') + '</div>';
+  }
+  if (!rm.length && !ex.length) h += '<p class="note">इस आइटम में सामग्री बदलने का विकल्प नहीं है। नीचे नोट लिख सकते हैं।</p>';
+  h += '<div class="field"><label for="iNote">अपना बदलाव या नोट (वैकल्पिक)</label><input id="iNote" maxlength="120" placeholder="जैसे: प्याज कम डालें"></div>';
+  h += '</div>';
+  var total = (priceOf(it, IS.size) + IS.added.reduce(function (s, a) { return s + (Number(a.price) || 0); }, 0)) * IS.qty;
+  h += '<div class="foot2"><button class="btn block" data-a="add">ऑर्डर में जोड़ें · ' + rs(total) + '</button></div>';
+  openSheet(h);
+}
+
+function renderCart() {
+  var h = '<div class="sh"><div class="big">🛒</div><div><h3>आपका ऑर्डर</h3><p class="muted">' + cartCount() + ' आइटम</p></div><button class="x" data-a="close" aria-label="बंद करें">×</button></div><div class="body">';
+  if (!cart.length) {
+    h += '<div class="empty">आपका ऑर्डर खाली है।<br>कुछ स्वादिष्ट चुनें!</div></div>';
+    openSheet(h);
+    return;
+  }
+  cart.forEach(function (l, i) {
+    var it = BY[l.id]; if (!it) return;
+    h += '<div class="line"><div class="em">' + (it.photo ? '<img src="' + it.photo + '" alt="" style="width:44px;height:44px;border-radius:10px;object-fit:cover">' : it.emoji) + '</div>' +
+      '<div class="info"><b>' + esc(it.name) + '</b><small>' + esc(lineDetails(l).join(' · ')) + '</small><small class="blue" style="font-weight:800">' + rs(lineTotal(l)) + '</small></div>' +
+      '<div class="qty"><button data-a="dec" data-i="' + i + '">−</button><span>' + l.qty + '</span><button data-a="inc" data-i="' + i + '">+</button></div></div>';
+  });
+  h += '</div><div class="foot2"><div class="total"><span>कुल</span><span class="blue">' + rs(cartTotal()) + '</span></div><button class="btn block" data-a="checkout">ऑर्डर आगे बढ़ाएँ</button></div>';
+  openSheet(h);
+}
+
+function renderCheckout() {
+  var nm = user ? user.name : '', mb = user ? user.mobile : '';
+  var h = '<div class="sh"><div class="big">📝</div><div><h3>ऑर्डर कन्फ़र्म करें</h3><p class="muted">कुल ' + rs(cartTotal()) + '</p></div><button class="x" data-a="close" aria-label="बंद करें">×</button></div><div class="body">';
+  h += '<div style="font-size:13px;border:2px solid var(--line);border-radius:14px;padding:10px 12px">' + cart.map(function (l) {
+    return '<div style="display:flex;justify-content:space-between;gap:10px;padding:3px 0"><span>' + l.qty + ' × ' + esc(BY[l.id] ? BY[l.id].name : '') + (lineDetails(l).length ? ' <small class="muted">(' + esc(lineDetails(l).join(', ')) + ')</small>' : '') + '</span><span class="blue" style="font-weight:800">' + rs(lineTotal(l)) + '</span></div>';
+  }).join('') + '</div>';
+  h += '<div class="field"><label for="cName">आपका नाम *</label><input id="cName" maxlength="40" value="' + esc(nm) + '"></div>';
+  h += '<div class="field"><label for="cMobile">मोबाइल नंबर *</label><input id="cMobile" type="tel" inputmode="numeric" maxlength="14" value="' + esc(mb) + '"></div>';
+  h += '<div class="lbl">ऑर्डर का प्रकार</div><div class="chips">' +
+    '<button class="chip' + (SVC === 'dine' ? ' on' : '') + '" data-a="svc" data-v="dine">🍽 डाइन-इन</button>' +
+    '<button class="chip' + (SVC === 'take' ? ' on' : '') + '" data-a="svc" data-v="take">🛍 पार्सल / टेकअवे</button></div>';
+  h += '<div class="field" id="tableWrap" style="' + (SVC === 'dine' ? '' : 'display:none') + '"><label for="cTable">टेबल नंबर *</label><input id="cTable" maxlength="6" placeholder="जैसे: 4"></div>';
+  h += '<div class="field" id="addrWrap" style="' + (SVC === 'take' ? '' : 'display:none') + '"><label for="cAddr">पार्सल का पता *</label><textarea id="cAddr" rows="2" maxlength="200" placeholder="घर या दुकान का पता"></textarea></div>';
+  h += '<div class="field"><label for="cNotes">ख़ास नोट (वैकल्पिक)</label><textarea id="cNotes" rows="2" maxlength="200" placeholder="जैसे: अलग पैक करें"></textarea></div>';
+  h += '<div class="err" id="cErr"></div></div>';
+  h += '<div class="foot2"><button class="btn wa block" data-a="place">WhatsApp पर ऑर्डर भेजें</button></div>';
+  openSheet(h);
+}
+
+function recordOrder(o) {
+  var arr = load('sw_orders_v3', []);
+  arr.unshift(o);
+  save('sw_orders_v3', arr.slice(0, 500));
+}
+
+function placeOrder() {
+  var name = ($('#cName').value || '').trim().replace(/\s+/g, ' ');
+  var mobile = normMobile($('#cMobile').value);
+  var table = ($('#cTable') ? $('#cTable').value : '').trim();
+  var addr = ($('#cAddr') ? $('#cAddr').value : '').trim().replace(/[\r\n]+/g, ', ');
+  var notes = ($('#cNotes').value || '').trim().replace(/[\r\n]+/g, ' ');
+  var err = $('#cErr');
+  if (!cart.length) { err.textContent = 'आपका ऑर्डर खाली है।'; return; }
+  if (name.length < 2) { err.textContent = 'कृपया अपना नाम लिखें।'; return; }
+  if (!mobile) { err.textContent = 'कृपया 10 अंकों का सही मोबाइल नंबर लिखें।'; return; }
+  if (SVC === 'dine' && !table) { err.textContent = 'टेबल नंबर लिखें, या पार्सल चुनें।'; return; }
+  if (SVC === 'take' && !addr) { err.textContent = 'पार्सल के लिए पता लिखें।'; return; }
+
+  var typeTxt = SVC === 'dine' ? 'डाइन-इन (टेबल ' + table + ')' : 'पार्सल / टेकअवे';
+  var lines = ['*नया ऑर्डर - Sawariya Restaurant*', '-----------------------------',
+    'ग्राहक: ' + name, 'मोबाइल: +91 ' + mobile, 'प्रकार: ' + typeTxt];
+  if (SVC === 'take') lines.push('पता: ' + addr);
+  lines.push('-----------------------------');
+  cart.forEach(function (l, i) {
+    lines.push((i + 1) + '. ' + BY[l.id].name + ' x ' + l.qty + ' = ' + rs(lineTotal(l)));
+    lineDetails(l).forEach(function (d) { lines.push('   - ' + d); });
+  });
+  lines.push('-----------------------------', '*कुल: ' + rs(cartTotal()) + '*');
+  if (notes) lines.push('', 'ख़ास नोट: ' + notes);
+  lines.push('', 'कृपया मेरा ऑर्डर कन्फ़र्म करें। धन्यवाद!');
+
+  recordOrder({
+    id: uid(), time: new Date().toISOString(), name: name, mobile: mobile,
+    type: SVC, table: SVC === 'dine' ? table : '', address: SVC === 'take' ? addr : '',
+    notes: notes, total: cartTotal(),
+    items: cart.map(function (l) {
+      return { name: BY[l.id].name, qty: l.qty, amount: lineTotal(l), details: lineDetails(l) };
+    })
+  });
+
+  var w = window.open('https://wa.me/' + waNum() + '?text=' + encodeURIComponent(lines.join('\n')), '_blank');
+  if (!w) { err.textContent = 'ब्राउज़र ने WhatsApp विंडो रोकी। बटन फिर से दबाएँ।'; return; }
+  user = { name: name, mobile: mobile }; save('sw_user', user);
+  renderUser();
+  cart = []; saveCart(); closeSheet(); renderStamps();
+  toast('WhatsApp खुल गया। ऑर्डर भेजें!');
+}
+
+/* ---------- owner: login + panel ---------- */
+function isOwner() { return sessionStorage.getItem('sw_owner') === '1'; }
+function openLogin() {
+  openSheet('<div class="sh"><div class="big">🔐</div><div><h3>मालिक लॉगिन</h3><p class="muted">नाम और पासवर्ड लिखें</p></div><button class="x" data-a="close" aria-label="बंद करें">×</button></div>' +
+    '<div class="body"><div class="field"><label for="lName">नाम</label><input id="lName" autocomplete="username"></div>' +
+    '<div class="field"><label for="lPass">पासवर्ड</label><input id="lPass" type="password" autocomplete="current-password"></div>' +
+    '<div class="err" id="lErr"></div></div>' +
+    '<div class="foot2"><button class="btn block" data-a="login">लॉगिन करें</button></div>');
+  setTimeout(function () { var el = $('#lName'); if (el) el.focus(); }, 50);
+}
+function doLogin() {
+  var n = ($('#lName').value || '').trim().replace(/\s+/g, ' ').toLowerCase();
+  var p = ($('#lPass').value || '').trim();
+  if (n === OWNER.name && p === OWNER.pass) {
+    sessionStorage.setItem('sw_owner', '1');
+    OWN.tab = 'menu';
+    ownerPanel();
+    toast('लॉगिन सफल');
+  } else {
+    $('#lErr').textContent = 'नाम या पासवर्ड गलत है।';
+    $('#lPass').value = '';
+  }
+}
+function openOwner() {
+  if (!isOwner()) { openLogin(); return; }
+  ownerPanel();
+}
+function ownerPanel() {
+  var tabs = [['menu', '🍽 मेन्यू'], ['orders', '📋 ऑर्डर हिस्ट्री'], ['settings', '⚙️ रिव्यू / Instagram / नंबर']];
+  var h = '<div class="sh"><div class="big">＋</div><div><h3>मालिक पैनल</h3><p class="muted">' + esc(OWNER.name) + ' · लॉगिन है</p></div><button class="x" data-a="close" aria-label="बंद करें">×</button></div>' +
+    '<div class="body"><div class="chips">' + tabs.map(function (t) {
+      return '<button class="chip' + (OWN.tab === t[0] ? ' on' : '') + '" data-a="otab" data-t="' + t[0] + '">' + t[1] + '</button>';
+    }).join('') + '</div><div style="margin-top:14px">' + ownBody() + '</div></div>' +
+    '<div class="foot2"><button class="btn ghost block" data-a="logout">लॉगआउट</button></div>';
+  openSheet(h);
+}
+function ownBody() {
+  if (OWN.tab === 'orders') return ordersTab();
+  if (OWN.tab === 'settings') return settingsTab();
+  return menuTab();
+}
+function menuTab() {
+  var h = '<button class="btn small blue-b" data-a="newitem">+ नया आइटम जोड़ें</button>';
+  CATS.forEach(function (c) {
+    var rows = ALL.filter(function (i) { return i.cat === c.id; });
+    h += '<div class="lbl">' + c.icon + ' ' + c.label + ' (' + rows.length + ')</div>';
+    rows.forEach(function (it) {
+      h += '<div class="adm-row' + (it.hidden ? '" style="opacity:.55' : '') + '"><div class="r1"><b style="flex:1">' + esc(it.name) + '</b><span class="muted">' + esc(priceText(it)) + '</span></div>' +
+        '<div class="r1" style="margin-top:8px"><button class="btn small ghost" data-a="edit" data-id="' + it.id + '">बदलें / फ़ोटो</button>' +
+        '<button class="btn small ghost" data-a="hide" data-id="' + it.id + '">' + (it.hidden ? 'दिखाएँ' : 'छुपाएँ') + '</button></div></div>';
+    });
+  });
+  return h;
+}
+function orderList() {
+  var q = (OWN.q || '').trim().toLowerCase(), qd = q.replace(/\D/g, '');
+  var all = load('sw_orders_v3', []);
+  var rows = all.filter(function (o) {
+    if (!q) return true;
+    return String(o.name || '').toLowerCase().indexOf(q) !== -1 ||
+      (qd && String(o.mobile || '').indexOf(qd) !== -1) ||
+      String(o.table || '').toLowerCase().indexOf(q) !== -1 ||
+      String(o.address || '').toLowerCase().indexOf(q) !== -1;
+  });
+  if (!rows.length) return '<p class="muted">कोई ऑर्डर नहीं मिला।</p>';
+  return rows.map(function (o) {
+    var where = o.type === 'dine' ? '<span class="tag">🍽 टेबल ' + esc(o.table) + '</span>' : '<span class="tag">🛍 पार्सल</span>';
+    return '<div class="ord"><div class="top"><b>' + esc(o.name) + '</b><b class="blue">' + rs(o.total) + '</b></div>' +
+      '<div class="meta">📞 +91 ' + esc(o.mobile) + ' · ' + esc(new Date(o.time).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })) + '</div>' +
+      '<div style="margin-top:6px">' + where + (o.address ? '<span class="tag">📍 ' + esc(o.address) + '</span>' : '') + '</div>' +
+      '<ul>' + (o.items || []).map(function (i) {
+        return '<li>' + i.qty + ' × ' + esc(i.name) + ' — ' + rs(i.amount) + (i.details && i.details.length ? '<br><small class="muted">' + esc(i.details.join(' · ')) + '</small>' : '') + '</li>';
+      }).join('') + '</ul>' +
+      (o.notes ? '<div class="meta">नोट: ' + esc(o.notes) + '</div>' : '') + '</div>';
+  }).join('');
+}
+function ordersTab() {
+  var all = load('sw_orders_v3', []);
+  var total = all.reduce(function (s, o) { return s + (Number(o.total) || 0); }, 0);
+  var sales = {};
+  all.forEach(function (o) { (o.items || []).forEach(function (i) {
+    sales[i.name] = sales[i.name] || { qty: 0, amt: 0 };
+    sales[i.name].qty += Number(i.qty) || 0; sales[i.name].amt += Number(i.amount) || 0;
+  }); });
+  var list = Object.keys(sales).sort(function (a, b) { return sales[b].amt - sales[a].amt; });
+  var h = '<p class="muted">कुल ऑर्डर: <b>' + all.length + '</b> · कुल बिक्री: <b class="blue">' + rs(total) + '</b></p>';
+  if (list.length) {
+    h += '<div class="lbl">आइटम-वार बिक्री</div>' + list.map(function (n) {
+      return '<div class="r1" style="justify-content:space-between;border-bottom:1px solid var(--line);padding:5px 0;font-size:14px"><span>' + esc(n) + ' × ' + sales[n].qty + '</span><span class="blue">' + rs(sales[n].amt) + '</span></div>';
+    }).join('');
+  }
+  h += '<div class="field"><input id="oSearch" placeholder="नाम, मोबाइल, टेबल या पते से खोजें" value="' + esc(OWN.q) + '"></div>';
+  h += '<div id="oList">' + orderList() + '</div>';
+  h += '<button class="btn small danger" data-a="clearOrders" style="margin-top:14px">हिस्ट्री साफ़ करें</button>';
+  return h;
+}
+function settingsTab() {
+  return '<div class="field"><label for="sPhone">दुकान का फ़ोन / WhatsApp (10 अंक)</label><input id="sPhone" inputmode="numeric" maxlength="13" value="' + esc(SET.phone) + '"></div>' +
+    '<div class="field"><label for="sAddr">दुकान का पता</label><textarea id="sAddr" rows="2" maxlength="200">' + esc(SET.address) + '</textarea></div>' +
+    '<div class="field"><label for="sReview">Google रिव्यू का लिंक</label><input id="sReview" value="' + esc(SET.reviewUrl) + '"><p class="note">Google Business में “Ask for reviews” वाला लिंक यहाँ पेस्ट करें। अभी यह सर्च लिंक है।</p></div>' +
+    '<div class="field"><label for="sInsta">Instagram आईडी (@ के बिना)</label><input id="sInsta" value="' + esc(SET.insta) + '" placeholder="जैसे: sawariya_nawabganj"><p class="note">खाली छोड़ेंगे तो Instagram बॉक्स वेबसाइट से हट जाएगा।</p></div>' +
+    '<div class="field"><label for="sMap">Google Maps लिंक</label><input id="sMap" value="' + esc(SET.mapUrl) + '"></div>' +
+    '<div class="err" id="sErr"></div>' +
+    '<button class="btn block" data-a="saveSettings" style="margin-top:14px">सेटिंग्स सेव करें</button>';
+}
+function saveSettings() {
+  var phone = ($('#sPhone').value || '').replace(/\D/g, '').slice(-10);
+  var rev = ($('#sReview').value || '').trim();
+  var ig = ($('#sInsta').value || '').trim().replace(/^@/, '');
+  if (phone.length !== 10 || !/^[6-9]/.test(phone)) { $('#sErr').textContent = 'सही 10 अंकों का नंबर लिखें।'; return; }
+  if (rev && !/^https?:\/\//.test(rev)) { $('#sErr').textContent = 'रिव्यू लिंक https:// से शुरू होना चाहिए।'; return; }
+  if (ig && !/^[A-Za-z0-9._]{1,30}$/.test(ig)) { $('#sErr').textContent = 'Instagram आईडी में सिर्फ़ अक्षर, नंबर, . और _ चलेंगे।'; return; }
+  SET = {
+    phone: phone, address: $('#sAddr').value.trim(),
+    reviewUrl: rev || DEF.reviewUrl, insta: ig,
+    mapUrl: ($('#sMap').value || '').trim() || DEF.mapUrl
+  };
+  save('sw_settings_v3', SET);
+  applySettings();
+  toast('सेटिंग्स सेव हुईं ✓');
+  OWN.tab = 'settings';
+  ownerPanel();
+}
+
+/* ---------- owner: item form ---------- */
+function itemForm(it, isNew) {
+  var rm = (it.removable || []).join(', ');
+  var ex = (it.extras || []).map(function (x) { return x.name + ':' + x.price; }).join(', ');
+  var h = '<div class="sh"><div class="big">' + (it.photo ? '<img src="' + it.photo + '" alt="">' : it.emoji) + '</div><div><h3>' + (isNew ? 'नया आइटम' : esc(it.name)) + '</h3><p class="muted">बदलाव करें और सेव दबाएँ</p></div><button class="x" data-a="close" aria-label="बंद करें">×</button></div><div class="body">';
+  h += '<div class="field"><label for="fName">आइटम का नाम</label><input id="fName" maxlength="60" value="' + esc(it.name) + '"></div>';
+  h += '<div class="field"><label for="fCat">श्रेणी</label><select id="fCat">' + CATS.map(function (c) { return '<option value="' + c.id + '"' + (c.id === it.cat ? ' selected' : '') + '>' + c.icon + ' ' + c.label + '</option>'; }).join('') + '</select></div>';
+  h += '<div class="field"><label for="fPrice">रेट ₹ (हाफ/फुल हो तो खाली छोड़ें)</label><input id="fPrice" inputmode="numeric" value="' + (it.sizes ? '' : (it.price || '')) + '"></div>';
+  h += '<div class="field"><label for="fSizes">हाफ़ ₹, फुल ₹ (जैसे 120,240) — खाली छोड़ें अगर साइज़ नहीं</label><input id="fSizes" value="' + (it.sizes ? it.sizes[0][1] + ',' + it.sizes[1][1] : '') + '"></div>';
+  h += '<div class="field"><label for="fOpts">विकल्प (कॉमा से: spice, sugar, style)</label><input id="fOpts" value="' + esc((it.opts || []).join(', ')) + '"><p class="note">spice = मसाला, sugar = चीनी, style = ड्राई/ग्रेवी</p></div>';
+  h += '<div class="field"><label for="fRm">हटाई जा सकने वाली सामग्री (कॉमा से)</label><input id="fRm" value="' + esc(rm) + '" placeholder="जैसे: प्याज, टमाटर, मेयोनीज़"></div>';
+  h += '<div class="field"><label for="fEx">एक्स्ट्रा नाम:रेट (कॉमा से)</label><input id="fEx" value="' + esc(ex) + '" placeholder="जैसे: एक्स्ट्रा चीज़:20, पनीर:40"></div>';
+  h += '<div class="field"><label for="fDesc">विवरण (वैकल्पिक)</label><input id="fDesc" maxlength="140" value="' + esc(it.desc || '') + '"></div>';
+  h += '<div class="field"><label for="fEmoji">आइकन (इमोजी)</label><input id="fEmoji" maxlength="4" value="' + esc(it.emoji || '🍽️') + '"></div>';
+  h += '<div class="field"><label for="fPhoto">खाने की फ़ोटो (वैकल्पिक)</label><input id="fPhoto" type="file" accept="image/*"></div>';
+  if (it.photo) h += '<label class="toggle"><input type="checkbox" id="fClear"> मौजूदा फ़ोटो हटाएँ</label>';
+  h += '<label class="toggle"><input type="checkbox" id="fHidden"' + (it.hidden ? ' checked' : '') + '> मेन्यू में छुपाएँ</label>';
+  h += '<div class="err" id="fErr"></div></div>';
+  h += '<div class="foot2"><button class="btn block" data-a="save" data-id="' + esc(it.id || '') + '" data-new="' + (isNew ? '1' : '0') + '">सेव करें</button></div>';
+  openSheet(h);
+}
+function parseSizes(s) {
+  var p = String(s || '').split(',').map(function (x) { return Number(String(x).replace(/\D/g, '')); });
+  if (p.length === 2 && p[0] > 0 && p[1] > 0) return [['हाफ', p[0]], ['फुल', p[1]]];
+  return null;
+}
+function parseExtras(s) {
+  return String(s || '').split(',').map(function (x) {
+    var p = x.split(':'), name = (p[0] || '').trim();
+    var price = Number(String(p[1] || '').replace(/\D/g, '')) || 0;
+    return name ? { name: name, price: price } : null;
+  }).filter(Boolean);
+}
+function readPhoto(file, cb) {
+  if (!file) { cb(''); return; }
+  var r = new FileReader();
+  r.onload = function () {
+    var img = new Image();
+    img.onload = function () {
+      var sc = Math.min(1, 640 / Math.max(img.width, img.height));
+      var c = document.createElement('canvas');
+      c.width = Math.round(img.width * sc); c.height = Math.round(img.height * sc);
+      c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+      cb(c.toDataURL('image/jpeg', 0.78));
+    };
+    img.onerror = function () { cb(''); };
+    img.src = r.result;
+  };
+  r.onerror = function () { cb(''); };
+  r.readAsDataURL(file);
+}
+function saveItem(id, isNew) {
+  var name = ($('#fName').value || '').trim();
+  if (name.length < 2) { $('#fErr').textContent = 'आइटम का नाम लिखें।'; return; }
+  var sizes = parseSizes($('#fSizes').value);
+  var price = Number(String($('#fPrice').value).replace(/\D/g, '')) || 0;
+  if (!sizes && !(price > 0)) { $('#fErr').textContent = 'रेट लिखें, या हाफ़/फुल रेट लिखें।'; return; }
+  var data = {
+    name: name, cat: $('#fCat').value,
+    price: sizes ? sizes[1][1] : price, sizes: sizes,
+    opts: $('#fOpts').value.split(',').map(function (x) { return x.trim(); }).filter(function (x) { return !!OPTS[x]; }),
+    removable: $('#fRm').value.split(',').map(function (x) { return x.trim(); }).filter(Boolean),
+    extras: parseExtras($('#fEx').value),
+    desc: $('#fDesc').value.trim(), emoji: $('#fEmoji').value.trim() || '🍽️',
+    hidden: $('#fHidden').checked
+  };
+  var clear = $('#fClear') && $('#fClear').checked;
+  var prev = isNew ? {} : (BY[id] || {});
+  var file = $('#fPhoto').files[0];
+
+  var finish = function (newPhoto) {
+    data.photo = newPhoto || (clear ? '' : (prev.photo || ''));
+    if (isNew) {
+      data.id = uid();
+      OVR.added.push(data);
+    } else if (isBase(id)) {
+      OVR.items[id] = data;
+    } else {
+      var k = OVR.added.findIndex(function (x) { return x.id === id; });
+      data.id = id;
+      if (k !== -1) OVR.added[k] = data;
+    }
+    save('sw_menu_v3', OVR);
+    rebuild();
+    renderMenu();
+    OWN.tab = 'menu';
+    toast('सेव हुआ ✓');
+    ownerPanel();
+  };
+  if (file) readPhoto(file, finish); else finish('');
+}
+function toggleHide(id) {
+  var it = BY[id]; if (!it) return;
+  var nh = !it.hidden;
+  if (isBase(id)) {
+    OVR.items[id] = Object.assign({}, OVR.items[id] || {}, { hidden: nh });
+  } else {
+    var k = OVR.added.findIndex(function (x) { return x.id === id; });
+    if (k !== -1) OVR.added[k].hidden = nh;
+  }
+  save('sw_menu_v3', OVR);
+  rebuild();
+  renderMenu();
+  ownerPanel();
+}
+
+/* ---------- user / gate ---------- */
+function renderUser() {
+  $('#userName').textContent = user && user.name ? user.name : 'Guest';
+  $('#stUser').textContent = user && user.name ? user.name + ' (+91 ' + user.mobile + ')' : '';
+}
+function showGate() {
+  $('#gName').value = user && user.name ? user.name : '';
+  $('#gMobile').value = user && user.mobile ? user.mobile : '';
+  $('#gErr').textContent = '';
+  $('#gate').classList.add('show');
+}
+$('#gateForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var name = $('#gName').value.trim().replace(/\s+/g, ' ');
+  var mobile = normMobile($('#gMobile').value);
+  if (name.length < 2) { $('#gErr').textContent = 'कृपया अपना नाम लिखें (कम से कम 2 अक्षर)।'; return; }
+  if (!mobile) { $('#gErr').textContent = 'कृपया 10 अंकों का सही मोबाइल नंबर लिखें।'; return; }
+  user = { name: name, mobile: mobile };
+  save('sw_user', user);
+  $('#gate').classList.remove('show');
+  renderUser(); renderStamps();
+});
+$('#userBtn').addEventListener('click', showGate);
+
+/* ---------- stamps ---------- */
+function stampData() {
+  if (!user) return { dates: [], code: '' };
+  var all = load('sw_stamps', {});
+  var d = all[user.mobile] || {};
+  return { dates: Array.isArray(d.dates) ? d.dates : [], code: d.code || '' };
+}
+function saveStampData(d) { var all = load('sw_stamps', {}); all[user.mobile] = d; save('sw_stamps', all); }
+function renderStamps() {
+  var d = stampData(), n = d.dates.length;
+  $('#stProg').textContent = n + ' / 7';
+  var g = '';
+  for (var i = 0; i < 7; i++) {
+    var on = i < n, last = i === 6;
+    g += '<div class="slot' + (on ? ' on' : '') + '">' + (on
+      ? '<div><span class="st">' + (last ? '🎁' : '🪙') + '</span>' + fmtDay(d.dates[i]) + '</div>'
+      : '<div>' + (last ? '🎁' : 'दिन ' + (i + 1)) + '</div>') + '</div>';
+  }
+  $('#stGrid').innerHTML = g;
+  $('#claimBtn').disabled = n >= 7 || !user;
+  $('#claimBtn').textContent = n >= 7 ? 'कार्ड पूरा हुआ!' : 'आज का स्टैम्प लें';
+  var rb = '';
+  if (n >= 7) {
+    var msg = 'मैं 7 स्टैम्प पूरे कर चुका/चुकी हूँ, कृपया फ्री चाय या कॉफ़ी दें।\nनाम: ' + (user ? user.name : '') + '\nकोड: ' + d.code;
+    rb = '<div class="reward"><h4 style="margin:0">🎉 इनाम अनलॉक हुआ!</h4><p class="muted" style="margin:6px 0 0">फ्री चाय या कॉफ़ी</p>' +
+      '<div class="code">' + esc(d.code) + '</div><p class="muted" style="font-size:12px;margin:0 0 10px">यह कोड काउंटर पर दिखाएँ</p>' +
+      '<a class="btn wa block" target="_blank" rel="noopener" href="https://wa.me/' + waNum() + '?text=' + encodeURIComponent(msg) + '">WhatsApp पर इनाम क्लेम करें</a></div>';
+  }
+  $('#rewardBox').innerHTML = rb;
+}
+function newCode() {
+  var a = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789', s = '';
+  for (var i = 0; i < 4; i++) s += a[Math.floor(Math.random() * a.length)];
+  return 'SAWA-' + user.mobile.slice(-4) + '-' + s;
+}
+function setStampMsg(t, cls) { var m = $('#stMsg'); m.textContent = t; m.className = 'msg ' + (cls || ''); }
+$('#claimBtn').addEventListener('click', function () {
+  if (!user) { showGate(); return; }
+  var d = stampData(), t = todayStr();
+  if (d.dates.length >= 7) { setStampMsg('आपका कार्ड पूरा है! नीचे से इनाम क्लेम करें।', 'okc'); return; }
+  if (d.dates.indexOf(t) !== -1) { setStampMsg('आज का स्टैम्प मिल चुका है। कल फिर आइए!', 'warn'); return; }
+  d.dates.push(t);
+  if (d.dates.length === 7 && !d.code) d.code = newCode();
+  saveStampData(d);
+  renderStamps();
+  setStampMsg(d.dates.length === 7 ? 'बधाई! सभी 7 स्टैम्प मिल गए।' : 'स्टैम्प ' + d.dates.length + ' मिल गया। कल फिर आइए!', 'okc');
+});
+
+/* ---------- reviews ---------- */
+var REV = {
+  hi: [
+    'सावरिया रेस्टोरेंट में खाना बहुत स्वादिष्ट और साफ़-सुथरा है। शुद्ध शाकाहारी और परिवार के साथ आने लायक जगह। नवाबगंज आएँ तो ज़रूर आइए।',
+    'यहाँ का फ़ैमिली थाली और चाइनीज़ बहुत अच्छा है। दाम वाजिब हैं और स्टाफ़ का व्यवहार बहुत अच्छा है। बहुत बढ़िया!',
+    'नवाबगंज में सावरिया की पाव भाजी और पराठे लाजवाब हैं। ऑर्डर भी जल्दी मिल जाता है। बार-बार आने का मन करता है।',
+    'सावरिया का स्वाद घर जैसा लगता है। पनीर पकौड़े और मिक्स पराठा ज़रूर ट्राई करें। Highly recommended!'
+  ],
+  en: [
+    'Sawariya Restaurant serves very tasty and clean food. Pure vegetarian and a great place for the whole family. If you are in Nawabganj, do visit.',
+    'The Family Thali and Chinese dishes here are really good. Prices are fair and the staff is polite. Excellent place!',
+    'The pav bhaji and parathas at Sawariya are amazing. Ordering is quick too. Always feels worth coming back.',
+    'The food tastes like home. Try the paneer pakoda and the mix paratha. Highly recommended!'
+  ]
+};
+var rvLang = 'hi', rvIdx = 0;
+function showRev() {
+  $('#rvText').value = REV[rvLang][rvIdx % REV[rvLang].length];
+  $('#rvHi').classList.toggle('on', rvLang === 'hi');
+  $('#rvEn').classList.toggle('on', rvLang === 'en');
+}
+function fallbackCopy(t) { try { t.focus(); t.select(); return document.execCommand('copy'); } catch (e) { return false; } }
+function copyRev() {
+  var t = $('#rvText'), txt = t.value.trim();
+  if (!txt) return Promise.resolve(false);
+  if (navigator.clipboard && window.isSecureContext) {
+    return navigator.clipboard.writeText(txt).then(function () { return true; }, function () { return fallbackCopy(t); });
+  }
+  return Promise.resolve(fallbackCopy(t));
+}
+$('#rvHi').addEventListener('click', function () { rvLang = 'hi'; showRev(); });
+$('#rvEn').addEventListener('click', function () { rvLang = 'en'; showRev(); });
+$('#rvNext').addEventListener('click', function () { rvIdx++; showRev(); });
+$('#rvCopy').addEventListener('click', function () {
+  copyRev().then(function (ok) { toast(ok ? 'रिव्यू कॉपी हो गया। Google पर पेस्ट करें 👍' : 'कॉपी नहीं हो पाया। टेक्स्ट दबाकर कॉपी करें।'); });
+});
+$('#reviewGo').addEventListener('click', function () {
+  copyRev().then(function () {
+    window.open(SET.reviewUrl || DEF.reviewUrl, '_blank');
+    toast('रिव्यू कॉपी हो गया। Google पर पेस्ट करके Post करें 👍');
+  });
+});
+
+/* ---------- floating food ---------- */
+(function () {
+  var box = $('#bgFood');
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var list = ['🍕', '🍔', '🍜', '🥟', '🍛', '🫓', '🍦', '🥪', '🍝', '🧆', '☕', '🍚'];
+  for (var i = 0; i < 14; i++) {
+    var s = document.createElement('span');
+    s.textContent = list[i % list.length];
+    s.style.left = (Math.random() * 100) + '%';
+    s.style.fontSize = (26 + Math.random() * 22) + 'px';
+    s.style.animationDuration = (18 + Math.random() * 16) + 's';
+    s.style.animationDelay = (-Math.random() * 30) + 's';
+    box.appendChild(s);
+  }
+})();
+
+/* ---------- events ---------- */
+document.addEventListener('click', function (e) {
+  var t = e.target.closest('[data-a]');
+  if (!t) { if (e.target.id === 'sheet') closeSheet(); return; }
+  var a = t.getAttribute('data-a');
+
+  if (a === 'cat') { activeCat = t.getAttribute('data-c'); renderMenu(); }
+  else if (a === 'item') openItem(t.getAttribute('data-id') || t.closest('[data-id]').getAttribute('data-id'));
+  else if (a === 'close') closeSheet();
+  else if (a === 'size') { IS.size = +t.getAttribute('data-i'); renderItem(); }
+  else if (a === 'opt') { IS.o[t.getAttribute('data-k')] = t.getAttribute('data-v'); renderItem(); }
+  else if (a === 'qty') { IS.qty = Math.min(50, Math.max(1, IS.qty + Number(t.getAttribute('data-d')))); renderItem(); }
+  else if (a === 'rm') {
+    var v = t.getAttribute('data-v'), p = IS.removed.indexOf(v);
+    if (p === -1) IS.removed.push(v); else IS.removed.splice(p, 1);
+    renderItem();
+  }
+  else if (a === 'ad') {
+    var ex = BY[IS.id].extras[+t.getAttribute('data-i')];
+    var q = IS.added.findIndex(function (x) { return x.name === ex.name; });
+    if (q === -1) IS.added.push({ name: ex.name, price: ex.price }); else IS.added.splice(q, 1);
+    renderItem();
+  }
+  else if (a === 'add') {
+    var item = BY[IS.id];
+    var o = {}; (item.opts || []).forEach(function (k) { o[k] = IS.o[k]; });
+    var note = ($('#iNote') ? $('#iNote').value : '').trim().slice(0, 120);
+    var line = { id: item.id, size: IS.size, o: o, qty: IS.qty, removed: IS.removed.slice(), added: IS.added.slice(), note: note };
+    var key = lineKey(line);
+    var same = cart.filter(function (l) { return lineKey(l) === key; })[0];
+    if (same) same.qty = Math.min(50, same.qty + line.qty); else cart.push(line);
+    saveCart(); closeSheet(); toast('जोड़ा गया: ' + item.name);
+  }
+  else if (a === 'inc') { var l1 = cart[+t.getAttribute('data-i')]; if (l1) l1.qty = Math.min(50, l1.qty + 1); saveCart(); renderCart(); }
+  else if (a === 'dec') { var idx = +t.getAttribute('data-i'), l2 = cart[idx]; if (l2) { l2.qty--; if (l2.qty <= 0) cart.splice(idx, 1); } saveCart(); renderCart(); }
+  else if (a === 'checkout') { if (cart.length) renderCheckout(); }
+  else if (a === 'svc') {
+    SVC = t.getAttribute('data-v');
+    var tw = $('#tableWrap'), aw = $('#addrWrap');
+    if (tw) tw.style.display = SVC === 'dine' ? '' : 'none';
+    if (aw) aw.style.display = SVC === 'take' ? '' : 'none';
+    t.parentNode.querySelectorAll('.chip').forEach(function (c) { c.classList.toggle('on', c === t); });
+  }
+  else if (a === 'place') placeOrder();
+
+  else if (a === 'login') doLogin();
+  else if (a === 'logout') { sessionStorage.removeItem('sw_owner'); closeSheet(); toast('लॉगआउट हो गए'); }
+  else if (a === 'otab') { OWN.tab = t.getAttribute('data-t'); ownerPanel(); }
+  else if (a === 'newitem') { if (!isOwner()) { openLogin(); return; } itemForm({ name: '', cat: activeCat, price: 0, sizes: null, opts: [], removable: [], extras: [], desc: '', emoji: '🍽️', photo: '', hidden: false }, true); }
+  else if (a === 'edit') { if (!isOwner()) { openLogin(); return; } var eit = BY[t.getAttribute('data-id')]; if (eit) itemForm(eit, false); }
+  else if (a === 'hide') { if (!isOwner()) { openLogin(); return; } toggleHide(t.getAttribute('data-id')); }
+  else if (a === 'save') { saveItem(t.getAttribute('data-id'), t.getAttribute('data-new') === '1'); }
+  else if (a === 'saveSettings') saveSettings();
+  else if (a === 'clearOrders') {
+    if (confirm('सारी ऑर्डर हिस्ट्री इस डिवाइस से हटानी है?')) { save('sw_orders_v3', []); ownerPanel(); toast('हिस्ट्री साफ़ हुई'); }
+  }
+});
+document.addEventListener('input', function (e) {
+  if (e.target && e.target.id === 'oSearch') {
+    OWN.q = e.target.value;
+    var l = $('#oList'); if (l) l.innerHTML = orderList();
+  }
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') closeSheet();
+  if (e.key === 'Enter' && e.target && e.target.id === 'lPass') doLogin();
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.getAttribute && e.target.getAttribute('data-a') === 'item') {
+    e.preventDefault(); openItem(e.target.getAttribute('data-id'));
+  }
+});
+$('#cartBtn').addEventListener('click', renderCart);
+$('#ownerBtn').addEventListener('click', openOwner);
+$('#ownerLinkBtn').addEventListener('click', openOwner);
+
+/* ---------- boot ---------- */
+$('#yr').textContent = new Date().getFullYear();
+applySettings();
+renderUser();
+renderMenu();
+renderCartCount();
+showRev();
+renderStamps();
+if (!user || !user.name || !user.mobile) showGate();
+})();
+</script>
+</body>
+</html>
